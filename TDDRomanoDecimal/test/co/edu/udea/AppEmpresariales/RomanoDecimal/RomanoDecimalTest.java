@@ -1,6 +1,3 @@
-/*De forma individual entregar la URL del repositorio para un nuevo algoritmo, 
-usando TDD, en el cual conviertan de número romano a decimal.*/
-
 package co.edu.udea.AppEmpresariales.RomanoDecimal;
 
 import static org.junit.Assert.*;
@@ -12,7 +9,7 @@ import org.junit.Test;
 public class RomanoDecimalTest {
 
 	private RomanoDecimal rd;
-	int numeroConvertido;
+	private int numeroConvertido;
 	
 	@Before
 	public void setUp() throws Exception {
@@ -103,5 +100,52 @@ public class RomanoDecimalTest {
 	public void convertirC() {
 		numeroConvertido = rd.convertirRomanoDecimal("C");
 		Assert.assertEquals(100, numeroConvertido);
+	}
+	/*convertir CCCX en 310*/
+	@Test
+	public void convertirCCCX() {
+		numeroConvertido = rd.convertirRomanoDecimal("CCCX");
+		Assert.assertEquals(310, numeroConvertido);
+	}
+	/*convertir CD en 400*/
+	@Test
+	public void convertirCD() {
+		numeroConvertido = rd.convertirRomanoDecimal("CD");
+		Assert.assertEquals(400, numeroConvertido);
+	}
+	/*convertir CDLXVII en 467*/
+	@Test
+	public void convertirCDLXVII() {
+		numeroConvertido = rd.convertirRomanoDecimal("CDLXVII");
+		Assert.assertEquals(467, numeroConvertido);
+	}
+	/*convertir D en 500*/
+	@Test
+	public void convertirD() {
+		numeroConvertido = rd.convertirRomanoDecimal("D");
+		Assert.assertEquals(500, numeroConvertido);
+	}
+	/*convertir CM en 900*/
+	@Test
+	public void convertirCM() {
+		numeroConvertido = rd.convertirRomanoDecimal("CM");
+		Assert.assertEquals(900, numeroConvertido);
+	}/*convertir DCCCXCVIII en 898*/
+	@Test
+	public void convertirDCCCXCVIII() {
+		numeroConvertido = rd.convertirRomanoDecimal("DCCCXCVIII");
+		Assert.assertEquals(898, numeroConvertido);
+	}
+	/*convertir M en 1000*/
+	@Test
+	public void convertirM() {
+		numeroConvertido = rd.convertirRomanoDecimal("M");
+		Assert.assertEquals(1000, numeroConvertido);
+	}
+	/*convertir MMMCMXXXVIII en 3938*/
+	@Test
+	public void convertirMMMCMXXXVIII() {
+		numeroConvertido = rd.convertirRomanoDecimal("MMMCMXXXVIII");
+		Assert.assertEquals(3938, numeroConvertido);
 	}
 }
