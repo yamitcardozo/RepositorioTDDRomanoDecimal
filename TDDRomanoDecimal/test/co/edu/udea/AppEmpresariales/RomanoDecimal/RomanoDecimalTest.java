@@ -12,41 +12,96 @@ import org.junit.Test;
 public class RomanoDecimalTest {
 
 	private RomanoDecimal rd;
+	int numeroConvertido;
 	
 	@Before
 	public void setUp() throws Exception {
 		rd = new RomanoDecimal();
+		
 	}
 
 	/*convertir I en 1*/
 	@Test
 	public void convertirI() {
-		
-		int numeroConvertido = rd.convertirRomanoDecimal("I");
+		numeroConvertido = rd.convertirRomanoDecimal("I");
 		Assert.assertEquals(1, numeroConvertido);
 	}
 	/*convertir II en 2*/
 	@Test
 	public void convertirII() {
-		int numeroConvertido = rd.convertirRomanoDecimal("II");
+		numeroConvertido = rd.convertirRomanoDecimal("II");
 		Assert.assertEquals(2, numeroConvertido);
 	}
 	/*convertir IV en 4*/
 	@Test
 	public void convertirIV() {
-		int numeroConvertido = rd.convertirRomanoDecimal("IV");
+		numeroConvertido = rd.convertirRomanoDecimal("IV");
 		Assert.assertEquals(4, numeroConvertido);
 	}
 	/*convertir V en 5*/
 	@Test
 	public void convertirV() {
-		int numeroConvertido = rd.convertirRomanoDecimal("V");
+		numeroConvertido = rd.convertirRomanoDecimal("V");
 		Assert.assertEquals(5, numeroConvertido);
 	}
 	/*convertir VII en 7*/
 	@Test
 	public void convertirVI() {
-		int numeroConvertido = rd.convertirRomanoDecimal("VII");
+		numeroConvertido = rd.convertirRomanoDecimal("VII");
 		Assert.assertEquals(7, numeroConvertido);
+	}
+	/*convertir XIII en 13*/
+	@Test
+	public void convertirXIII() {
+		numeroConvertido = rd.convertirRomanoDecimal("XIII");
+		Assert.assertEquals(13, numeroConvertido);
+	}
+	/*convertir XXXXIV en 34*/
+	@Test
+	public void convertirXXXIV() {
+		numeroConvertido = rd.convertirRomanoDecimal("XXXIV");
+		Assert.assertEquals(34, numeroConvertido);
+	}
+	/*convertir XL en 40*/
+	@Test
+	public void convertirXL() {
+		numeroConvertido = rd.convertirRomanoDecimal("XL");
+		Assert.assertEquals(40, numeroConvertido);
+	}
+	/*convertir XLVI en 46*/
+	@Test
+	public void convertirXLVI() {
+		numeroConvertido = rd.convertirRomanoDecimal("XLVI");
+		Assert.assertEquals(46, numeroConvertido);
+	}
+	/*convertir L en 50*/
+	@Test
+	public void convertirL() {
+		numeroConvertido = rd.convertirRomanoDecimal("L");
+		Assert.assertEquals(50, numeroConvertido);
+	}
+	/*convertir LXXXIX en 89*/
+	@Test
+	public void convertirLXXXIX() {
+		numeroConvertido = rd.convertirRomanoDecimal("LXXXIX");
+		Assert.assertEquals(89, numeroConvertido);
+	}
+	/*convertir XC en 90*/
+	@Test
+	public void convertirXC() {
+		numeroConvertido = rd.convertirRomanoDecimal("XC");
+		Assert.assertEquals(90, numeroConvertido);
+	}
+	/*convertir XCVIII en 98*/
+	@Test
+	public void convertirXCVIII() {
+		numeroConvertido = rd.convertirRomanoDecimal("XCVIII");
+		Assert.assertEquals(98, numeroConvertido);
+	}
+	/*convertir C en 100*/
+	@Test
+	public void convertirC() {
+		numeroConvertido = rd.convertirRomanoDecimal("C");
+		Assert.assertEquals(100, numeroConvertido);
 	}
 }
